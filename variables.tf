@@ -65,6 +65,12 @@ variable "cidr_block" {
   description = "Base CIDR block which will be divided into subnet CIDR blocks (e.g. `10.0.0.0/16`)"
 }
 
+variable "map_public_ip_on_launch" {
+  type        = bool
+  description = "Maps public IP addresses on instance launch"
+  default     = true
+}
+
 variable "igw_id" {
   type        = string
   description = "Internet Gateway ID which will be used as a default route in public route tables (e.g. `igw-9c26a123`). Conflicts with `ngw_id`"
